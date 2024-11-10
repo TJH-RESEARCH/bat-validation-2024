@@ -2,6 +2,12 @@
 # LOAD PACKAGES ---------------------------------------------------------------- 
 library(tidyverse)
 
+
+# FILE STRUCTURE ---------------------------------------------------------------
+## Create an output folder if one doesn't exist (because it was deleted)
+if(!dir.exists(here::here('output'))){dir.create(here::here('output'))}
+
+
 # IMPORT -----------------------------------------------------------------------
 data <- haven::read_sav(here::here('data/Public Safety Dataset.sav'))
 
@@ -15,7 +21,12 @@ source(here::here('src/2-score-scales.R'))
 
 
 # DEMOGRAPHICS -----------------------------------------------------------------
+
+## Demographic Table
 source(here::here('src/3-demographics.R'))
+
+## Histogram of the Mean BAT Score
+source(here::here('src/3-bat-histogram.R'))
 
 
 # FACTOR ANALYSIS --------------------------------------------------------------
@@ -23,17 +34,43 @@ source(here::here('src/3-demographics.R'))
 source(here::here('src/4-factor-analysis/cfa.R'))
 
 
-# INTERNAl CONSISTENCY ---------------------------------------------------------
+# INTERNAL CONSISTENCY ---------------------------------------------------------
+
 ## Omega
 source(here::here('src/5-internal-consistency/omega.R'))
+
+## Descriptive Statistics
+source(here::here('src/5-internal-consistency/internal-descriptives.R'))
 
 ## Internal Correlation
 source(here::here('src/5-internal-consistency/internal-correlation.R'))
 
+## Internal Paired Plot
+source(here::here('src/5-internal-consistency/internal-pair-plot.R'))
 
-# CONVERGEN/DIVERGENT VALIDITY & PREDICTIVE VALIDITY ---------------------------
+## Inter-Item?
+source(here::here('src/5-internal-consistency/inter-item.R'))
+
+
+# CONVERGEN/DIVERGENT VALIDITY -------------------------------------------------
+## Descriptive Statistics
+source(here::here('src/6-divergent-validity/descriptives.R'))
+
 ## Correlation
-source(here::here('src/6-validity/correlation.R'))
+source(here::here('src/6-divergent-validity/correlation.R'))
 
-## Regression
-source(here::here('src/6-validity/regression.R'))
+## Paired Plot
+source(here::here('src/6-divergent-validity/pair-plot.R'))
+
+
+# PREDICTIVE VALIDITY ----------------------------------------------------------
+
+## Scatter Plot
+source(here::here('src/7-predictive-validity/bivariate-plot.R'))
+
+## Linear Model
+source(here::here('src/7-predictive-validity/linear-model.R'))
+
+## Regression Diagnostics
+source(here::here('src/7-predictive-validity/plot-residuals.R'))
+

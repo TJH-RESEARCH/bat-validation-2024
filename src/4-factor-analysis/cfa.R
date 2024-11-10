@@ -138,3 +138,4 @@ table_loadings <-
   pivot_wider(names_from = lhs, values_from = std.all)
 
 table_loadings %>% write_csv('output/table-loadings.csv')
+

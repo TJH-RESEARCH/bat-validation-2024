@@ -96,4 +96,4 @@ demographic_table <-
     select(demographic, everything())
   
 
-demographic_table %>% write_csv('output/table_demographics.csv')
+demographic_table %>% write_csv('output/table-demographics.csv')

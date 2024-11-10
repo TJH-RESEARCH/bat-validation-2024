@@ -31,3 +31,7 @@ table_omega <-
   )
 
 
+## For the entire BAT
+fit_one_factor %>% omega()
+
+

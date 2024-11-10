@@ -14,8 +14,7 @@ data <-
     years_tenure = yrs_wrk,
     supervisor = svision,
     second_job = sec_ovt
-  ) %>% 
-  glimpse()
+  )
 
 # CREATE A NUMERIC VALUE FROM ORDERED CATEGORICAL
 data <- 

@@ -3,6 +3,13 @@
 data <-
   data %>% 
   mutate(
+    bat_total = 
+      bat1 + bat2 + bat3 + bat4 + bat5 + bat6 +
+      bat7 + bat8 + bat9 + bat10 + bat11 + bat12 +
+      batsec1 + batsec2 + batsec3 + batsec4 +
+      batsec5 + batsec6 + batsec7 +
+      batsec8 + batsec9 + batsec10,
+    
     bat_sum = 
       bat1 + bat2 + bat3 + bat4 + bat5 + bat6 +
       bat7 + bat8 + bat9 + bat10 + bat11 + bat12,
