@@ -1,12 +1,31 @@
 
 histogram_age <-
-  data %>% ggplot(aes(age_num)) + geom_histogram()
+  data %>% 
+  ggplot(aes(age_num)) +
+  geom_histogram(bins = 15,
+                 alpha = .75, 
+                 fill = '#440154FF',
+                 color = 'black') +
+  labs(x = 'Years of Age', y = 'Count') +
+  theme_bw()
+histogram_age
+
 ggsave(plot = histogram_age, 
        filename = 'output/figure-age.jpeg',
        bg = "transparent", width = 6, height = 4, dpi = 300)
 
+
 histogram_tenure <-
-  data %>% ggplot(aes(years_tenure)) + geom_histogram()
+  data %>% 
+  ggplot(aes(years_tenure)) + 
+  geom_histogram(bins = 20,
+               alpha = .75, 
+               fill = '#440154FF',
+               color = 'black') +
+  labs(x = 'Years of Tenure', y = 'Count') +
+  theme_bw()
+histogram_tenure
+  
 ggsave(plot = histogram_tenure, 
        filename = 'output/figure-tenure.jpeg',
        bg = "transparent", width = 6, height = 4, dpi = 300)

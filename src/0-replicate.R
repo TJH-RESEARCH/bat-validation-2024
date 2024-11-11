@@ -37,7 +37,7 @@ source(here::here('src/4-factor-analysis/cfa.R'))
 # INTERNAL CONSISTENCY ---------------------------------------------------------
 
 ## Omega
-source(here::here('src/5-internal-consistency/omega.R'))
+source(here::here('src/5-internal-consistency/omeg-bat.R'))
 
 ## Descriptive Statistics
 source(here::here('src/5-internal-consistency/internal-descriptives.R'))
@@ -55,6 +55,9 @@ source(here::here('src/5-internal-consistency/inter-item.R'))
 # CONVERGEN/DIVERGENT VALIDITY -------------------------------------------------
 ## Descriptive Statistics
 source(here::here('src/6-divergent-validity/descriptives.R'))
+
+## Internal Consistency
+source(here::here('src/6-divergent-validity/omega.R'))
 
 ## Correlation
 source(here::here('src/6-divergent-validity/correlation.R'))

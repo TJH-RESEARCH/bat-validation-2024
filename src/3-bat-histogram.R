@@ -7,7 +7,7 @@ histogram_bat <-
                  alpha = .75, 
                  fill = '#440154FF',
                  color = 'black') +
-  labs(x = 'BAT', y = 'Count')
+  labs(x = 'BAT', y = 'Count') +
   theme_bw()
 
 histogram_bat
